@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FirstapiApplication {
 
 	String property = "unset";
+	String newprop = "";
 
 	@RequestMapping(method = RequestMethod.GET, path = "/")
 	public String sayHello(){
@@ -25,8 +26,14 @@ public class FirstapiApplication {
 	public String postVariable(@PathVariable String variable){
 
 		property = variable;
-
 		return property;
+		
+	}
+
+	@GetMapping("fakeGet/{parameter}")
+	public String fakeGet(@PathVariable String parameter){
+
+		return "Parameter given was: "+parameter;
 	}
 
 	@GetMapping("/test")
