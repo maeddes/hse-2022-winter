@@ -36,4 +36,22 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 ## Session 17-Oct-2022 Introduction to Spring and Spring Boot
 
+### Exercises/Lab task
+
+* Create a first project from Spring Initializr at: https://start.spring.io/
+* Edit in your editor of choice.
+* Optional: Try gitpod as cloud-based editor https://gitpod.io/
+* Experiment with starter dependencies. Recommended: Spring Web, Actuator, DevTools
+* Expose a public REST endpoint for a GET Call.
+* Pass a variable to the application using the @PathVariable annotation.
+
+### Links
+
+* https://start.spring.io/
+* https://gitpod.io/
+* https://spring.io/guides/gs/rest-service/ (or basically Spring Guides in general)
+* https://www.baeldung.com/spring-pathvariable (or basically all Baeldung guides)
+
+
+
 
