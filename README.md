@@ -27,3 +27,10 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * https://landscape.cncf.io/
 * https://csrc.nist.gov/publications/detail/sp/800-145/final
 
+## Session 10-Oct-2022 Container & Docker
+
+### Exercises/Lab task
+
+* Do the container lab given at: https://hfthse.trainings.nvtc.io/
+
+## Session 17-Oct-2022 Introduction to Spring and Spring Boot
