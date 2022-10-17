@@ -31,6 +31,9 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 ### Exercises/Lab task
 
+* Create or get yourself a Docker Id (https://www.docker.com)
 * Do the container lab given at: https://hfthse.trainings.nvtc.io/
 
 ## Session 17-Oct-2022 Introduction to Spring and Spring Boot
+
+
