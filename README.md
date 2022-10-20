@@ -1,6 +1,6 @@
 # Distributed Systems Lecture - Winter Semester 2022 - HSE
 
-## Session 07-Oct-2022 Distributed Systems & Cloud Computing Introduction
+## Session 26-Sep-2022 Distributed Systems & Cloud Computing Introduction
 
 ### Intro questions:
 
