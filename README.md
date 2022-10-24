@@ -52,6 +52,15 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * https://spring.io/guides/gs/rest-service/ (or basically Spring Guides in general)
 * https://www.baeldung.com/spring-pathvariable (or basically all Baeldung guides)
 
+## Session 24-Oct-2022 API, Rest & HTTP
 
+### Exercise/Lab Task
+
+* Create a full CRUD Rest API on your application
+* The API object is a simple Java object with the following field
+````
+    private String todo;
+    private int priority = 2;
+````
 
 
