@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,11 +34,20 @@ public class FirstapiApplication {
 	}
 
 	// should not be like that - GET is supposed to be implemented read-only
+	// example of how you should not do is - this should be a PUT
 	@GetMapping("fakeGet/{parameter}")
 	public String fakeGet(@PathVariable String parameter){
 
 		property = parameter;
-		return "Parameter given was: "+parameter;
+		return "Local property is: "+property;
+	}
+
+	@PostMapping("/users/{name}/{lastname}")
+	public Object createUser(){
+
+		// new User(name, lastname);
+
+		return null;
 	}
 
 	@GetMapping("/test")
@@ -46,7 +56,15 @@ public class FirstapiApplication {
 		return property;
 	}
 
-	@GetMapping("/hi")
+	// // The swamp of pox
+	// @GetMapping("/deleteLastNamefromObject/{variable}")
+
+	// // Using resources/objects
+	// @GetMapping("/Object/{object_properties}")
+
+	// // Using resources/objects/verbs
+	// @PutMapping("/Object/{id}/{object_properties}")
+	@GetMapping("/xxx")
 	public String sayHelloAgain(){
 
 		return "Hello again, Esslingen. Beautiful weather in October!";
