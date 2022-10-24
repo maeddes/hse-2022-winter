@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+// makes class eligible to handle HTTP requests
 @RestController
 public class FirstapiApplication {
 
 	String property = "unset";
 	String newprop = "";
 
+	// map base URL to method sayHello()
 	@RequestMapping(method = RequestMethod.GET, path = "/")
 	public String sayHello(){
 
@@ -30,9 +32,11 @@ public class FirstapiApplication {
 		
 	}
 
+	// should not be like that - GET is supposed to be implemented read-only
 	@GetMapping("fakeGet/{parameter}")
 	public String fakeGet(@PathVariable String parameter){
 
+		property = parameter;
 		return "Parameter given was: "+parameter;
 	}
 
