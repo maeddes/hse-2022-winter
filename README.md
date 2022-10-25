@@ -62,5 +62,15 @@ cloud computing in own words and list examples for offerings, topologies and tec
     private String todo;
     private int priority = 2;
 ````
+* A RestController class is supposed to have an internal list of these objects and provide CRUD functionality.
+* Starter sample is given in the git repo.
+
+Links:
+
+* https://www.baeldung.com/spring-requestmapping
+* https://www.baeldung.com/spring-request-response-body
+* https://www.baeldung.com/spring-rest-openapi-documentation
+* https://www.baeldung.com/spring-cors
+* 
 
 
