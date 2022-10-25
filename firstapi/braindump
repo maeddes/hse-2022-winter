@@ -1,1 +1,3 @@
 sdk install java 17.0.4.1-tem
+
+server.forward-headers-strategy=native
