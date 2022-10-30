@@ -25,7 +25,6 @@ public class ApiController {
     // Add new item to list
     // version 1: using path variables
     // version 2: using a JSON object as input
-
     @PostMapping("/items/{name}")
     public TodoItem createAndAddItem(@PathVariable String name){
 
@@ -35,6 +34,7 @@ public class ApiController {
         return item;
     }
 
+    // List all elements in ArrayList
     @GetMapping("/items/")
     public List<TodoItem> getItems(){
 
@@ -43,7 +43,7 @@ public class ApiController {
 
 
 
-    // List all elements in ArrayList
+
 
 
     // Update an item in the list
