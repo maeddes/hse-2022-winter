@@ -71,6 +71,12 @@ Links:
 * https://www.baeldung.com/spring-request-response-body
 * https://www.baeldung.com/spring-rest-openapi-documentation
 * https://www.baeldung.com/spring-cors
-* 
+
+## Session 31-Oct-2022 API, Rest & HTTP continued
+
+### Exercise/Lab Task
+
+* Watch the video I uploaded :-)
+* Exercises given there
 
 
