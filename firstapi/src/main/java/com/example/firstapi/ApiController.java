@@ -2,6 +2,7 @@ package com.example.firstapi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 
 // CRUD Controller class
 @RestController
-@RequestMapping("/api/v2")
+@RequestMapping("/api/v2/items")
 public class ApiController {
 
     private ArrayList<TodoItem> items = new ArrayList<TodoItem>();
@@ -39,7 +41,7 @@ public class ApiController {
         @ApiResponse(responseCode = "201", description = "Item has been created" , content = @Content)
     })
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/items/{name}")
+    @PostMapping("/{name}")
     public TodoItem createAndAddItem(@PathVariable String name){
 
         TodoItem item = new TodoItem(name);
@@ -58,7 +60,7 @@ public class ApiController {
         @ApiResponse(responseCode = "201", description = "Item has been created" , content = @Content)
     })
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/items/")
+    @PostMapping("/")
     public TodoItem addItem(@RequestBody TodoItem item){
 
         items.add(item);
@@ -67,7 +69,7 @@ public class ApiController {
 
     // List all elements in ArrayList
     @Operation(summary = "Returns a list of ToDo items")
-    @GetMapping(value = "/items/", produces = "application/json")
+    @GetMapping(value = "/", produces = "application/json")
     @ApiResponses(value = 
                     {
                         @ApiResponse(responseCode = "200", description = "List all items" , content = @Content)
@@ -76,6 +78,19 @@ public class ApiController {
     public List<TodoItem> getItems(){
 
         return items;
+    }
+
+    @Operation(summary = "Find a shopping item by its itemId")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Found the item", content = {
+                    @Content(mediaType = "application/json", schema = @Schema(implementation = TodoItem.class)) }),
+            @ApiResponse(responseCode = "400", description = "Invalid itemId supplied", content = @Content),
+            @ApiResponse(responseCode = "404", description = "Item not found", content = @Content) })
+    @GetMapping(produces = "application/json", path = "/{itemId}")
+    Optional<TodoItem> getShoppingItem(@PathVariable long itemId) {
+
+        return null;
+
     }
 
     // Update an item in the list

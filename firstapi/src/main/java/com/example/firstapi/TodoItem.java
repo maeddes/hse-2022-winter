@@ -30,5 +30,30 @@ public class TodoItem {
     public String toString() {
         return "TodoItem [todo=" + todo + ", priority=" + priority + "]";
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((todo == null) ? 0 : todo.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        TodoItem other = (TodoItem) obj;
+        if (todo == null) {
+            if (other.todo != null)
+                return false;
+        } else if (!todo.equals(other.todo))
+            return false;
+        return true;
+    }
     
 }
