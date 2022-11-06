@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -124,10 +125,20 @@ public class ApiController {
         return null;
     }
 
-    // Update an item in the list
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping(consumes = "application/json", produces = "application/json", path = "/")
+    TodoItem updateTodo(@RequestBody TodoItem todoItem){
 
-    // your TODO :-)
+        for(TodoItem item : items){
 
-    // Delete an item from the list
+            if (item.equals(todoItem)) item.setPriority(todoItem.getPriority());
+            return item;
+
+        }
+
+        items.add(todoItem);
+        return todoItem;
+        
+    }
     
 }

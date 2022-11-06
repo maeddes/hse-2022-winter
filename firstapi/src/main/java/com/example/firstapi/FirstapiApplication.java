@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 // makes class eligible to handle HTTP requests
 @RestController
+@RequestMapping("/practice")
 public class FirstapiApplication {
 
 	String property = "unset";
@@ -56,14 +56,6 @@ public class FirstapiApplication {
 		return property;
 	}
 
-	// // The swamp of pox
-	// @GetMapping("/deleteLastNamefromObject/{variable}")
-
-	// // Using resources/objects
-	// @GetMapping("/Object/{object_properties}")
-
-	// // Using resources/objects/verbs
-	// @PutMapping("/Object/{id}/{object_properties}")
 	@GetMapping("/xxx")
 	public String sayHelloAgain(){
 
@@ -73,5 +65,16 @@ public class FirstapiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FirstapiApplication.class, args);
 	}
+
+	// Richardson's Maturity Model
+
+	// // The swamp of pox
+	// @GetMapping("/deleteLastNamefromObject/{variable}")
+
+	// // Using resources/objects
+	// @GetMapping("/Object/{object_properties}")
+
+	// // Using resources/objects/verbs
+	// @PutMapping("/Object/{id}/{object_properties}")
 
 }
