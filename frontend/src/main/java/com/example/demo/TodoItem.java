@@ -7,6 +7,8 @@ public class TodoItem implements Serializable{
     public String todo;
     public int priority = 2;
     
+    public TodoItem(){}
+
     public TodoItem(String todo) {
         this.todo = todo;
     }    

@@ -11,10 +11,10 @@
 <div>
     <h1>Shopping list</h1>
     <form method="POST" th:action="@{/create}">
-        <label for="newitem">New Shopping Item</label>
+        <label for="newitem">New ToDo Item</label>
         <input type="text" name="newItem" th:value="${newItem}" />
         <label>Priority</label>
-        <input type="text" name="amount" th:value="${amount}" />
+        <input type="text" name="priority" th:value="${priority}" />
         <input type="submit" value="Add!">
     </form>
 </div>
@@ -31,7 +31,7 @@
             <td th:text="${item.priority}"/>
             <td>
                 <form method="POST" th:action="@{/delete}">
-                    <input type="hidden" name="id" th:value="${item.id}" />
+                    <input type="hidden" name="todo" th:value="${item.todo}" />
                     <input type="submit" value="Done!"/>
                 </form>
             </td>
