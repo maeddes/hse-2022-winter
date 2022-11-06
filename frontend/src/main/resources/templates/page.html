@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping for Students</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<link rel="stylesheet" href="style.css"/>
+
+<body>
+
+<div>
+    <h1>Shopping list</h1>
+    <form method="POST" th:action="@{/create}">
+        <label for="newitem">New Shopping Item</label>
+        <input type="text" name="newItem" th:value="${newItem}" />
+        <label>Priority</label>
+        <input type="text" name="amount" th:value="${amount}" />
+        <input type="submit" value="Add!">
+    </form>
+</div>
+
+<div th:unless="${#lists.isEmpty(items)}">    
+    <table>
+        <tr>
+            <th>ToDo</th>
+            <th>Priority</th>
+            <th>Done?</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.todo}"/>
+            <td th:text="${item.priority}"/>
+            <td>
+                <form method="POST" th:action="@{/delete}">
+                    <input type="hidden" name="id" th:value="${item.id}" />
+                    <input type="submit" value="Done!"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div th:if="${#lists.isEmpty(items)}">
+    <table>
+        <tr>
+            <th>ToDo</th>
+            <th>Priority</th>
+            <th>Done?</th>
+        </tr>
+        <tr>
+            <td>Nothing</td>
+            <td>Zero</td>
+            <td>:-)</td>
+        </tr>
+    </table>
+</div>
+
+</body>
