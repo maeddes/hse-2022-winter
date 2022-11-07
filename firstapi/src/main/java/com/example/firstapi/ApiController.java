@@ -22,12 +22,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
-
 // CRUD Controller class
 @RestController
 @RequestMapping("/todos")
 public class ApiController {
 
+    // internal list of todo items
     private ArrayList<TodoItem> items = new ArrayList<TodoItem>();
 
     // Add new item to list
@@ -49,6 +49,7 @@ public class ApiController {
 
     // Add new item to list
     // version 2: using a JSON object as input
+    // TODO: Allow only one item with certain name in list.
 
     // Be careful when importing RequestBody
     @Operation(summary = "Creates a Todo Item with a JSON object as request paramter")
@@ -94,7 +95,7 @@ public class ApiController {
             if (item.equals(tempItem)) returnItem = Optional.of(item);
 
         }
-
+        // TODO: Return 404 in case of item not found
         return returnItem;
 
     }

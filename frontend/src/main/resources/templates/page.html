@@ -8,16 +8,6 @@
 
 <body>
 
-<div>
-    <h1>Shopping list</h1>
-    <form method="POST" th:action="@{/create}">
-        <label for="newitem">New ToDo Item</label>
-        <input type="text" name="newItem" th:value="${newItem}" />
-        <label>Priority</label>
-        <input type="text" name="priority" th:value="${priority}" />
-        <input type="submit" value="Add!">
-    </form>
-</div>
 
 <div th:unless="${#lists.isEmpty(items)}">    
     <table>
@@ -48,10 +38,21 @@
         </tr>
         <tr>
             <td>Nothing</td>
-            <td>Zero</td>
-            <td>:-)</td>
+            <td>To</td>
+            <td>Do</td>
         </tr>
     </table>
+</div>
+
+<div>
+    <h1>HSE 2022 Winter ToDo list</h1>
+    <form method="POST" th:action="@{/create}">
+        <label for="newitem">New ToDo Item</label>
+        <input type="text" name="newItem" th:value="${newItem}" />
+        <label>Priority</label>
+        <input type="text" name="priority" th:value="${priority}" />
+        <input type="submit" value="Add!">
+    </form>
 </div>
 
 </body>

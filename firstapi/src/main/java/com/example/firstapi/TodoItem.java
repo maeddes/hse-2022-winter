@@ -1,9 +1,14 @@
 package com.example.firstapi;
 
-public class TodoItem {
+import java.io.Serializable;
 
+public class TodoItem implements Serializable {
+
+    // Id
     private String todo;
     private int priority = 2;
+
+    public TodoItem(){}
     
     public TodoItem(String todo) {
         this.todo = todo;
@@ -12,6 +17,11 @@ public class TodoItem {
     public TodoItem(String todo, int priority) {
         this.todo = todo;
         this.priority = priority;
+    }
+
+    public void setTodo(String todo){
+
+        this.todo = todo;
     }
 
     public String getTodo() {
