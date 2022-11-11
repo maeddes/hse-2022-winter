@@ -4,3 +4,9 @@ swagger URL: base-URL + /swagger-ui/index.html (e.g. https://8080-maeddes-hse202
 OpenAPI URL: base-URL + /v3/api-docs/
 
 server.forward-headers-strategy=native
+
+https://www.baeldung.com/swagger-set-example-description
+https://www.baeldung.com/rest-http-put-vs-post
+
+https://www.baeldung.com/rest-template
+https://www.baeldung.com/spring-5-webclient
