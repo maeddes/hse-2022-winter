@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -17,10 +18,35 @@ public class FirstapiApplication {
 
 	String property = "unset";
 	String newprop = "";
+	TodoItem item = new TodoItem("test");
 
 	// map base URL to method sayHello()
-	@RequestMapping(method = RequestMethod.GET, path = "/")
-	public String sayHello(){
+	@RequestMapping(method = RequestMethod.GET, path = "/requeststring")
+	public String simpleRequestMappingGetHello(){
+
+		return "Hallo, Esslingen. Beautiful weather in October!";
+	}
+
+	@GetMapping(path = "/getstring")
+	public String simpleGetMappingHello(){
+
+		return "Hallo, Esslingen. Beautiful weather in October!";
+	}
+
+	/*
+	 * Remember, we don't need to annotate the @RestController-annotated controllers 
+	 * with the @ResponseBody annotation since Spring does it by default.
+	 */
+
+	@GetMapping(path = "/getstringresponsebody")
+	@ResponseBody
+	public String simpleGetMappingHelloWithResponseBody(){
+
+		return "Hallo, Esslingen. Beautiful weather in October!";
+	}
+
+	@GetMapping(path = "/getobject")
+	public String simpleGetMappingObject(){
 
 		return "Hallo, Esslingen. Beautiful weather in October!";
 	}
