@@ -87,10 +87,11 @@ public class ApiController {
 
         for(TodoItem item : items){
 
-            if (item.equals(todoItem))
+            if (item.equals(todoItem)){
 
                 item.setPriority(todoItem.getPriority());
                 return;
+            }
 
         }
 
