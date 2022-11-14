@@ -4,3 +4,5 @@ swagger URL: base-URL + /swagger-ui/index.html (e.g. https://8080-maeddes-hse202
 OpenAPI URL: base-URL + /v3/api-docs/
 
 server.forward-headers-strategy=native
+
+https://www.gitpod.io/guides/custom-java-distribution-on-gitpod
