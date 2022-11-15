@@ -1,0 +1,13 @@
+must be done every start of gitpod? sdk install java 17.0.4.1-tem
+
+swagger URL: base-URL + /swagger-ui/index.html (e.g. https://8080-maeddes-hse2022winter-oz2p2rbi8vt.ws-eu73.gitpod.io/swagger-ui/index.html)
+OpenAPI URL: base-URL + /v3/api-docs/
+
+server.forward-headers-strategy=native
+
+https://www.gitpod.io/guides/custom-java-distribution-on-gitpod
+https://www.baeldung.com/swagger-set-example-description
+https://www.baeldung.com/rest-http-put-vs-post
+
+https://www.baeldung.com/rest-template
+https://www.baeldung.com/spring-5-webclient

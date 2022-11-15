@@ -1,15 +1,14 @@
-package com.example.firstapi;
+package com.example.demo;
 
 import java.io.Serializable;
 
-public class TodoItem implements Serializable {
+public class TodoItem implements Serializable{
 
-    // Id
-    private String todo;
-    private int priority = 2;
-
-    public TodoItem(){}
+    public String todo;
+    public int priority = 2;
     
+    public TodoItem(){}
+
     public TodoItem(String todo) {
         this.todo = todo;
     }    
@@ -17,11 +16,6 @@ public class TodoItem implements Serializable {
     public TodoItem(String todo, int priority) {
         this.todo = todo;
         this.priority = priority;
-    }
-
-    public void setTodo(String todo){
-
-        this.todo = todo;
     }
 
     public String getTodo() {
@@ -57,11 +51,13 @@ public class TodoItem implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-
         TodoItem other = (TodoItem) obj;
-        if(todo.equals(other.todo)) return true;
-
-        return false;
+        if (todo == null) {
+            if (other.todo != null)
+                return false;
+        } else if (!todo.equals(other.todo))
+            return false;
+        return true;
     }
     
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping for Students</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<link rel="stylesheet" href="style.css"/>
+
+<body>
+
+
+<div th:unless="${#lists.isEmpty(items)}">    
+    <table>
+        <tr>
+            <th>ToDo</th>
+            <th>Priority</th>
+            <th>Done?</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.todo}"/>
+            <td th:text="${item.priority}"/>
+            <td>
+                <form method="POST" th:action="@{/delete}">
+                    <input type="hidden" name="todo" th:value="${item.todo}" />
+                    <input type="submit" value="Done!"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div th:if="${#lists.isEmpty(items)}">
+    <table>
+        <tr>
+            <th>ToDo</th>
+            <th>Priority</th>
+            <th>Done?</th>
+        </tr>
+        <tr>
+            <td>Nothing</td>
+            <td>To</td>
+            <td>Do</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h1>HSE 2022 Winter ToDo list</h1>
+    <form method="POST" th:action="@{/create}">
+        <label for="newitem">New ToDo Item</label>
+        <input type="text" name="newItem" th:value="${newItem}" />
+        <label>Priority</label>
+        <input type="text" name="priority" th:value="${priority}" />
+        <input type="submit" value="Add!">
+    </form>
+</div>
+
+</body>
