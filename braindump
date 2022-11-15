@@ -6,3 +6,8 @@ OpenAPI URL: base-URL + /v3/api-docs/
 server.forward-headers-strategy=native
 
 https://www.gitpod.io/guides/custom-java-distribution-on-gitpod
+https://www.baeldung.com/swagger-set-example-description
+https://www.baeldung.com/rest-http-put-vs-post
+
+https://www.baeldung.com/rest-template
+https://www.baeldung.com/spring-5-webclient
