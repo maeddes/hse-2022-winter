@@ -87,6 +87,8 @@ public class ApiController {
 
         for(TodoItem item : items){
 
+
+            // if item already exists, just update it and return
             if (item.equals(todoItem)){
 
                 item.setPriority(todoItem.getPriority());
@@ -95,6 +97,7 @@ public class ApiController {
 
         }
 
+        // if item did not exist, add it to the list
         items.add(todoItem);
         return;
 
