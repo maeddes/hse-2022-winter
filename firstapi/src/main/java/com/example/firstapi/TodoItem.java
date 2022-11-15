@@ -57,13 +57,11 @@ public class TodoItem implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
+
         TodoItem other = (TodoItem) obj;
-        if (todo == null) {
-            if (other.todo != null)
-                return false;
-        } else if (!todo.equals(other.todo))
-            return false;
-        return true;
+        if(todo.equals(other.todo)) return true;
+
+        return false;
     }
     
 }

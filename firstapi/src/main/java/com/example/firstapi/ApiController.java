@@ -130,10 +130,15 @@ public class ApiController {
     @PutMapping(consumes = "application/json", produces = "application/json", path = "/")
     TodoItem updateTodo(@RequestBody TodoItem todoItem){
 
+
         for(TodoItem item : items){
 
-            if (item.equals(todoItem)) item.setPriority(todoItem.getPriority());
-            return item;
+            System.out.println("todoItem "+todoItem+" original: "+item);
+            
+            if (item.equals(todoItem)) {
+                item.setPriority(todoItem.getPriority());
+                return item;
+            }
 
         }
 
