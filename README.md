@@ -79,4 +79,10 @@ Links:
 * Watch the video I uploaded :-)
 * Exercises given there
 
+## Session 07-Nov-2022 Frontend & Backend
 
+## Session 14-Nov-2022 Microservices (Theory)
+
+## Session 21-Nov-2022 cancelled
+
+## Session 28-Nov-2022 Persistence & Spring Data JPA
