@@ -89,6 +89,8 @@ Links:
 
 ## Session 14-Nov-2022 Microservices (Theory)
 
+![CAP Theorem](pics/docker_loadbalancer_haproxy_2022_11_28.png)
+
 ## Session 21-Nov-2022 cancelled
 
 ## Session 28-Nov-2022 Persistence & Spring Data JPA
