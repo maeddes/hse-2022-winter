@@ -29,12 +29,16 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 ## Session 10-Oct-2022 Container & Docker
 
+![Docker Components & API](pics/docker_components_flow_2022_10_10.png)
+
 ### Exercises/Lab task
 
 * Create or get yourself a Docker Id (https://www.docker.com)
 * Do the container lab given at: https://hfthse.trainings.nvtc.io/
 
 ## Session 17-Oct-2022 Introduction to Spring and Spring Boot
+
+![Spring Boot Initializr Flow](pics/spring_boot_initializr_flow_2022_10_17.png)
 
 ### Exercises/Lab task
 
@@ -53,6 +57,8 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * https://www.baeldung.com/spring-pathvariable (or basically all Baeldung guides)
 
 ## Session 24-Oct-2022 API, Rest & HTTP
+
+![API Idea](pics/spring_boot_api_client_server_2022_10_24.png)
 
 ### Exercise/Lab Task
 
