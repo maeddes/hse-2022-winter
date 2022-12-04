@@ -58,7 +58,7 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 ## Session 24-Oct-2022 API, Rest & HTTP
 
-![API Idea](pics/spring_boot_api_client_server_2022_10_24.png)
+![API Idea](pics/spring_boot_initial_rest_api_2022_11.png)
 
 ### Exercise/Lab Task
 
@@ -80,12 +80,16 @@ Links:
 
 ## Session 31-Oct-2022 API, Rest & HTTP continued
 
+![API Developed](pics/spring_boot_full_and_documented_rest_api_2022_11.png)
+
 ### Exercise/Lab Task
 
 * Watch the video I uploaded :-)
 * Exercises given there
 
 ## Session 07-Nov-2022 Frontend & Backend
+
+![Client/Server](pics/spring_boot_api_webclient_server_2022_10_24.png)
 
 ## Session 14-Nov-2022 Microservices (Theory)
 
