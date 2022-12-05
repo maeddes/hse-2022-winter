@@ -121,4 +121,6 @@ _The student knows about the evolution of distributed systems (and middleware) a
 ### Objectives and exercises
 _The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
 
+## Session 05-Dev-2022 Advanced Docker - docker-compose, volumes, build mechanisms
+
 
