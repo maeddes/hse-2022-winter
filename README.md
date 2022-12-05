@@ -95,6 +95,30 @@ Links:
 
 ![CAP Theorem](pics/docker_loadbalancer_haproxy_2022_11_28.png)
 
+* CAP Theorem
+* Conway's Law
+* Fallacies of distributed computing
+* Domain-Driven Design basics
+* 12-factor application
+* Evolution of applications and deployments: Monolithic -> Service-Oriented Architecture -> Microservices
+* Introduction to serverless and FaaS terminology
+
+### Objectives and exercises
+_The student knows about the evolution of distributed systems (and middleware) and the drivers towards state-of-the-art implementation and deployment. She/he can explain the underlying concepts and theories and put it into practical context. No dedicated exercises for this module. Recap of basics: Spring Boot, Docker, configuration, persistence and messaging._
+
 ## Session 21-Nov-2022 cancelled
 
 ## Session 28-Nov-2022 Persistence & Spring Data JPA
+
+* Spring Data
+* Concept of entities and repositories
+* JPA and JDBC basics
+* H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
+* Running databases as Docker images
+
+![Spring Data Components](pics/spring_data_overview.png)
+
+### Objectives and exercises
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+
+
