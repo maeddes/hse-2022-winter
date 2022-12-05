@@ -69,7 +69,7 @@ public class ApiController {
 
         for(TodoItem item : items){
 
-            if (item.equals(todoItem)){
+            if (item.equals(newItem)){
 
                 // Item already in list
                 return false;
@@ -80,6 +80,8 @@ public class ApiController {
             return true;
 
         }
+
+        return false;
 
     }
 
