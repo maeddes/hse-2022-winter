@@ -5,9 +5,15 @@ OpenAPI URL: base-URL + /v3/api-docs/
 
 server.forward-headers-strategy=native
 
-https://www.gitpod.io/guides/custom-java-distribution-on-gitpod
 https://www.baeldung.com/swagger-set-example-description
 https://www.baeldung.com/rest-http-put-vs-post
 
 https://www.baeldung.com/rest-template
 https://www.baeldung.com/spring-5-webclient
+
+https://www.haproxy.com/de/blog/the-four-essential-sections-of-an-haproxy-configuration/
+https://hub.docker.com/_/haproxy
+
+https://www.baeldung.com/rest-http-put-vs-post
+
+docker run -d -p 80:80 --name my-running-haproxy -v /Users/mhs/git/wip/hse-2022-winter:/usr/local/etc/haproxy:ro --sysctl net.ipv4.ip_unprivileged_port_start=0 haproxy:alpine
