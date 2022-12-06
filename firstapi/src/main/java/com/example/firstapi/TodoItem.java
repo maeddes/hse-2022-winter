@@ -2,9 +2,14 @@ package com.example.firstapi;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class TodoItem implements Serializable {
 
     // Id
+    @Id
     private String todo;
     private int priority = 2;
 
@@ -51,9 +56,8 @@ public class TodoItem implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
+
+        if (obj == null || todo == null)
             return false;
         if (getClass() != obj.getClass())
             return false;

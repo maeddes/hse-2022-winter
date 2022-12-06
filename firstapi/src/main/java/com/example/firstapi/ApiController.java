@@ -42,7 +42,7 @@ public class ApiController {
     public TodoItem createAndAddTodoItem(@PathVariable String name){
 
         TodoItem item = new TodoItem(name);
-        items.add(item);
+        this.updateList(item);
 
         return item;
     }
@@ -61,8 +61,48 @@ public class ApiController {
     @PostMapping("/")
     public TodoItem addTodoItem(@RequestBody TodoItem item){
 
-        items.add(item);
+        this.updateList(item);
         return item;
+    }
+
+    private boolean isInList(TodoItem newItem){
+
+        for(TodoItem item : items){
+
+            if (item.equals(newItem)){
+
+                // Item already in list
+                return false;
+
+            } 
+
+            // not in list yet - can be added;
+            return true;
+
+        }
+
+        return false;
+
+    }
+
+    private void updateList(TodoItem todoItem){
+
+        for(TodoItem item : items){
+
+
+            // if item already exists, just update it and return
+            if (item.equals(todoItem)){
+
+                item.setPriority(todoItem.getPriority());
+                return;
+            }
+
+        }
+
+        // if item did not exist, add it to the list
+        items.add(todoItem);
+        return;
+
     }
 
     // List all elements in ArrayList
@@ -90,11 +130,8 @@ public class ApiController {
         TodoItem tempItem = new TodoItem(itemId);
         Optional<TodoItem> returnItem = Optional.empty();
 
-        for(TodoItem item : items){
+        if(isInList(tempItem)) returnItem = Optional.of(tempItem);
 
-            if (item.equals(tempItem)) returnItem = Optional.of(item);
-
-        }
         // TODO: Return 404 in case of item not found
         return returnItem;
 
@@ -130,19 +167,8 @@ public class ApiController {
     @PutMapping(consumes = "application/json", produces = "application/json", path = "/")
     TodoItem updateTodo(@RequestBody TodoItem todoItem){
 
+        this.updateList(todoItem);
 
-        for(TodoItem item : items){
-
-            System.out.println("todoItem "+todoItem+" original: "+item);
-            
-            if (item.equals(todoItem)) {
-                item.setPriority(todoItem.getPriority());
-                return item;
-            }
-
-        }
-
-        items.add(todoItem);
         return todoItem;
         
     }
