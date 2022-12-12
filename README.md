@@ -123,4 +123,6 @@ _The student is able to build a Spring Boot application (or extend an existing o
 
 ## Session 05-Dev-2022 Advanced Docker - docker-compose, volumes, build mechanisms
 
+![Docker simplified image build and push mechanism](pics/docker_simplified_image_build_and_push.excalidraw.png)
 
+![Docker run and equivalent docker-compose file simplified](pics/docker_run_vs_compose.excalidraw.png)
