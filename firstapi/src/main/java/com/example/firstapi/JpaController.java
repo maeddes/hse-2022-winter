@@ -5,9 +5,11 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +20,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 @RestController
-@RequestMapping("/v2/todos")
+@RequestMapping("/todos")
 public class JpaController {
 
     @Autowired
@@ -38,7 +40,18 @@ public class JpaController {
         return item;
     }
 
-    // TODO implement other CRUD methods and make API compliant to v1
+    @Operation(summary = "Creates a Todo Item with a JSON object as request paramter")
+    @ApiResponses(value = 
+    {
+        @ApiResponse(responseCode = "201", description = "Item has been created" , content = @Content)
+    })
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/")
+    public TodoItem addTodoItem(@RequestBody TodoItem item){
+
+        todoItemRepository.save(item);
+        return item;
+    }
 
     @GetMapping("/count")
     public long getAmountOfItems(){
@@ -66,6 +79,15 @@ public class JpaController {
     public List<TodoItem> getTodoItems(){
 
         return todoItemRepository.findAll();
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping(consumes = "application/json", produces = "application/json", path = "/")
+    TodoItem deleteTodo(@RequestBody TodoItem item){
+
+        todoItemRepository.deleteById(item.getTodo());
+
+        return null;
     }
 
 

@@ -24,7 +24,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 // CRUD Controller class
 @RestController
-@RequestMapping("/todos")
+@RequestMapping("/old/todos")
 public class ApiController {
 
     // internal list of todo items
