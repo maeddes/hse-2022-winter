@@ -17,3 +17,9 @@ https://hub.docker.com/_/haproxy
 https://www.baeldung.com/rest-http-put-vs-post
 
 docker run -d -p 80:80 --name my-running-haproxy -v /Users/mhs/git/wip/hse-2022-winter:/usr/local/etc/haproxy:ro --sysctl net.ipv4.ip_unprivileged_port_start=0 haproxy:alpine
+
+mvn compile com.google.cloud.tools:jib-maven-plugin:3.2.1:dockerBuild -Dimage=maeddes/hsebackend:v3
+
+https://8080-maeddes-hse2022winter-oz2p2rbi8vt.ws-eu78.gitpod.io/swagger-ui/index.html
+
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docker-autocompose $(docker ps -aq)
