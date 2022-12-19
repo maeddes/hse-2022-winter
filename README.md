@@ -64,8 +64,8 @@ _The student understands the concepts and use cases of container technology and 
 
 * "WHY" Containers? List advantages/disadvantages ..
 * What is the difference between a container and a VM? List 3 criteria
-* Which technologies led to the evolution of docker (and why)? VMs, namespaces, chroot, cgroups, LXC, CF/Google containers
-* What is the difference between a docker daemon and the docker hub? Daemon = runtime, Docker Hub = public registry
+* Which technologies led to the evolution of docker (and why)? 
+* What is the difference between a docker daemon and the docker hub? 
 * What is the difference between docker run, docker pull and docker start?
 * Which command transitions from a container instance to an image?
 * What are the Docker components and describe them?
