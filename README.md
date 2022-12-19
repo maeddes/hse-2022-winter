@@ -123,6 +123,10 @@ The student is able to build and configure an own Spring Boot application from s
 
 ![API Idea](pics/spring_boot_initial_rest_api_2022_11.png)
 
+### Objectives and exercises
+_The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words._
+
+
 ### Exercise/Lab Task
 
 * Create a full CRUD Rest API on your application
