@@ -109,6 +109,7 @@ The student is able to build and configure an own Spring Boot application from s
 * What is the web page to start building your spring boot apps?
 * What kind of things can you configure on that Initializr? 
 * What is the role of the Actuator?
+* If you don't know the actuator list 3 other starter dependencies and explain briefly what they do?
 
 ## Session 24-Oct-2022 API, Rest & HTTP
 
