@@ -38,6 +38,7 @@ cloud computing in own words and list examples for offerings, topologies and tec
 ### Review questions
 
 * "WHY" Cloud? Explain advantages (and disadvantages) IN YOUR OWN WORDS!
+* Explain the difference of a product vs. a service in the context of cloud
 * Sketch a Cloud abstraction layer diagram and provide technology samples for each
 * "aas" - Explain the term service as opposed to a product (in the context of cloud)
 
