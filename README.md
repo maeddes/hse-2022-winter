@@ -237,23 +237,37 @@ _The student is able to build a Spring Boot application (or extend an existing o
 
 ## Session 05-Dev-2022 Advanced Docker - docker-compose & network
 
+* Docker networks
+* Docker volumes
+* Docker-compose
+
+### Objectives
+_The student understands the Docker functionality of networks and volumes. This includes the ability to create volumes and networks and connect them to container instances. The student is able to build container landscapes by using docker run, docker network and docker volume CLI API commands on the one hand, but also how to do equivalent things using docker-compose._
+
+### Links
+
+* https://docs.docker.com/network/
+* https://docs.docker.com/storage/
+* https://docs.docker.com/compose/
+
 ![Docker simplified image build and push mechanism](pics/docker_simplified_image_build_and_push.excalidraw.png)
 
 ![Docker run and equivalent docker-compose file simplified](pics/docker_run_vs_compose.excalidraw.png)
 
+### Review Questions
+
+* What's the difference between docker run and docker-compose?
+* Which advantages does docker-compose bring over plain docker commands?
+* What's the difference in handling docker networks and docker volumes from the perspective of a running container?
+* Which 12-factor aspects can you identify in the context of docker?
+
 ## Session 12-Dec-2022 Advanced Docker - volumes & docker-compose recap
+
+See previous lecture :-)
 
 ![Docker & Microservice full landscape](pics/full_landscape_docker_and_microservices.excalidraw.png)
 
-### Review questions
-
-* "WHY" do you need an enterprise architecture? What are the requirements?
-* How can you solve these problems with framework or containers?
-* "At which do you need more?"
-* "What else do you need?"
-
 ## Session 19-Dec-2022 Semester Recap & Container Build Options
-
 
 * Difference and relation between container and container images
 * Concepts of image layers
@@ -275,7 +289,7 @@ _The student understands the relation between container image and container, how
 * https://github.com/maeddes/options-galore-container-build/blob/main/walkthrough.adoc
 * https://github.com/GoogleContainerTools/jib
 
-=== Review questions
+### Review questions
 
 * List 3 different options to build a container image
 * Explain docker build vs docker commit 
@@ -283,3 +297,10 @@ _The student understands the relation between container image and container, how
 * Explain or list 1 advantage&disadvantage comparing JIB and Paketo/CNB to original Dockerfiles
 * How is a container image build up internally?
 * Which are criterias you can think that make image building "better" 
+
+### Review questions
+
+* "WHY" do you need an enterprise architecture? What are the requirements?
+* How can you solve these problems with framework or containers?
+* "At which do you need more?"
+* "What else do you need?"
