@@ -166,6 +166,26 @@ Links:
 
 ## Session 07-Nov-2022 Frontend & Backend
 
+* Use WebClient as REST client within an application
+* Build a graphical web UI using Thymeleaf
+* CRUD operations between applications
+* Connect Thymeleaf and WebClient functionality
+
+=== Objectives and exercises
+_The student is able to understand web UIs using Thymeleaf technologie. This includes steps like displaying dynamic content, iterating over lists and reading input from the web UI. The student understands the WebClient as default REST Client for Spring Boot applications and is able to implement CRUD operations with a REST API. In the exercise combine both technologies to provide a graphical web UI to interact with a REST API of another service._
+
+image::pics/thymeleaf_webclient.png[Thymeleaf & WebClient]
+
+=== Links:
+
+* https://rieckpil.de/spring-webclient-for-restful-communication-setup-and-examples/
+* https://bclozel.github.io/webflux-workshop/
+* https://www.websparrow.org/spring/spring-boot-consuming-a-rest-services-with-webclient
+* https://javatechonline.com/how-to-develop-a-reactive-crud-rest-api-with-spring-webflux/
+* https://www.baeldung.com/spring-5-webclient
+* https://www.baeldung.com/spring-controller-vs-restcontroller
+* https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+
 ![Client/Server](pics/spring_boot_api_webclient_server_2022_10_24.png)
 
 ## Session 14-Nov-2022 Microservices (Theory)
@@ -217,13 +237,66 @@ _The student is able to build a Spring Boot application (or extend an existing o
 
 ## Session 05-Dev-2022 Advanced Docker - docker-compose & network
 
+* Docker networks
+* Docker volumes
+* Docker-compose
+
+### Objectives
+_The student understands the Docker functionality of networks and volumes. This includes the ability to create volumes and networks and connect them to container instances. The student is able to build container landscapes by using docker run, docker network and docker volume CLI API commands on the one hand, but also how to do equivalent things using docker-compose._
+
+### Links
+
+* https://docs.docker.com/network/
+* https://docs.docker.com/storage/
+* https://docs.docker.com/compose/
+
 ![Docker simplified image build and push mechanism](pics/docker_simplified_image_build_and_push.excalidraw.png)
 
 ![Docker run and equivalent docker-compose file simplified](pics/docker_run_vs_compose.excalidraw.png)
 
+### Review Questions
+
+* What's the difference between docker run and docker-compose?
+* Which advantages does docker-compose bring over plain docker commands?
+* What's the difference in handling docker networks and docker volumes from the perspective of a running container?
+* Which 12-factor aspects can you identify in the context of docker?
+
 ## Session 12-Dec-2022 Advanced Docker - volumes & docker-compose recap
 
+See previous lecture :-)
+
 ![Docker & Microservice full landscape](pics/full_landscape_docker_and_microservices.excalidraw.png)
+
+## Session 19-Dec-2022 Semester Recap & Container Build Options
+
+* Difference and relation between container and container images
+* Concepts of image layers
+* "docker commit"
+* History of Dockerfile. Initial, multi-stage & BuildKit
+* Building container for Java apps
+* Using Jib, Cloud-Native Buildpacks and Paketo
+
+![Container Build Options](pics/container_build_options.png)
+
+### Objectives and exercises
+_The student understands the relation between container image and container, how to instantiate a container from an image and how to commit to a new image from an existing container. The exercise is to build the previous Spring Boot application and put it into a container image using various options, e.g. different Dockerfile options, Google JIB, CND, Paketo and more ...? The student is aware and able to describe on a high-level what the different fundamentals of the various approaches are and is able to list advantages and disadvantages._
+
+### Links
+
+* https://docs.docker.com/engine/reference/builder/
+* https://buildpacks.io/
+* https://paketo.io/
+* https://github.com/maeddes/options-galore-container-build/blob/main/walkthrough.adoc
+* https://github.com/GoogleContainerTools/jib
+
+### Review questions
+
+* List 3 different options to build a container image
+* Explain docker build vs docker commit 
+* List 2 evolution steps of the Dockerfile and provide 1 improvement for each step 
+* Explain or list 1 advantage&disadvantage comparing JIB and Paketo/CNB to original Dockerfiles
+* How is a container image build up internally?
+* Which are criterias you can think that make image building "better" 
 
 ### Review questions
 
