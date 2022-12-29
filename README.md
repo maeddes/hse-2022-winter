@@ -304,3 +304,7 @@ _The student understands the relation between container image and container, how
 * How can you solve these problems with framework or containers?
 * "At which do you need more?"
 * "What else do you need?"
+
+### Outlook questions
+
+* Which kind of limitations do you see in a docker-based environment for running high-available distributed applications?
