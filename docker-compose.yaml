@@ -9,7 +9,7 @@ services:
     environment:
       - SERVER_PORT=8090
       - BACKEND_ENDPOINT=http://backend:8080/todos/
-    image: "maeddes/hsefrontend:v1"
+    image: "maeddes/hsefrontend:v231"
   backend:
     container_name: backend
     ports:
@@ -17,7 +17,7 @@ services:
     environment:
       - SERVER_PORT=8080
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/hsedb
-    image: "maeddes/hsebackend:v3"
+    image: "maeddes/hsebackend:v23"
     networks:
       - hsenet
     depends_on:
@@ -45,4 +45,4 @@ networks:
 
 volumes:
   hsevol:
-    external: true
+    external: false

@@ -14,13 +14,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Controller
-@RequestMapping("/")
 public class Frontend {
 
     @Value("${backend.endpoint}")
     private String todoApiEndpoint;
 
-    @GetMapping
+    @GetMapping("/")
     public String displayPage(Model model) {
 
         TodoItem[] items = WebClient

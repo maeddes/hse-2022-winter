@@ -1,3 +1,13 @@
 tasks:
   - name: setup jdk temurin
     command: echo y|sdk install java 17.0.5-tem
+ports:
+  - name: Frontend
+    port: 8090
+    visibility: public
+  - name: Backend
+    port: 8080
+    visibility: public
+  - name: Database
+    port: 5432
+    visibility: private

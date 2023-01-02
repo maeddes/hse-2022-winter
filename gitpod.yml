@@ -1,5 +1,0 @@
-tasks:
-  - name: Setup & Build
-    before: yarn global add express
-    init: yarn install
-    command: echo y|sdk install java 17.0.5-tem
