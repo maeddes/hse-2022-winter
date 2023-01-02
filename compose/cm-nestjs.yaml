@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  frontend:
+    container_name: frontend
+    networks:
+      - hsenet
+    ports:
+      - "8090:8090"
+    environment:
+      - SERVER_PORT=8090
+      - BACKEND_ENDPOINT=http://backend:8080/todos/
+    image: "maeddes/hsefrontend:v23"
+  backend:
+    container_name: backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PORT=5432
+    image: "ghcr.io/freakeyplays/vs-lab-backend:latest"
+    networks:
+      - hsenet
+    depends_on:
+      - database
+  database:
+    container_name: postgresdb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    image: "postgres"
+    networks:
+      - hsenet
+    volumes:
+#      version bind mount. Points to a directory in your fs
+#      - /workspace/hse-2022-winter/pgdata:/var/lib/postgresql/data
+#      version docker volume. Points to a shared volume provided by docker
+      - hsevol:/var/lib/postgresql/data
+networks:
+  hsenet:
+    name: hsenet
+
+volumes:
+  hsevol:
+    external: false
