@@ -17,7 +17,6 @@ services:
     environment:
       - SERVER_PORT=8080
       - POSTGRES_HOST=localhost
-      - POSTGRES_PORT=5432
     image: "ghcr.io/freakeyplays/vs-lab-backend:latest"
     networks:
       - hsenet
