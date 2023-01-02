@@ -2,6 +2,7 @@ package com.example.firstapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 // makes class eligible to handle HTTP requests
@@ -19,6 +22,21 @@ public class FirstapiApplication {
 	String property = "unset";
 	String newprop = "";
 	TodoItem item = new TodoItem("test");
+
+	/**
+	 * @return nothing
+	 */
+	@Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("*");
+            }
+        };
+    }
+
+
 
 	// map base URL to method sayHello()
 	@RequestMapping(method = RequestMethod.GET, path = "/requeststring")
@@ -102,5 +120,7 @@ public class FirstapiApplication {
 
 	// // Using resources/objects/verbs
 	// @PutMapping("/Object/{id}/{object_properties}")
+
+
 
 }
