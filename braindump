@@ -26,3 +26,4 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docke
 
 exercise question: - caching in client yes/no?
 
+./mvnw compile com.google.cloud.tools:jib-maven-plugin:3.2.1:build -Dimage=maeddes/frontend:v0.1
