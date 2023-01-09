@@ -9,8 +9,7 @@ services:
     environment:
       - SERVER_PORT=8090
       - BACKEND_ENDPOINT=http://backend:8080/todos/
-    image: "maeddes/hsefrontend:v231"
-    build: ./frontend
+    image: "maeddes/hsefrontend:v23"
   backend:
     container_name: backend
     ports:

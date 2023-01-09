@@ -8,13 +8,32 @@ services:
       - "8090:8090"
     environment:
       - SERVER_PORT=8090
-      - BACKEND_ENDPOINT=http://backend:8080/todos/
-    image: "maeddes/hsefrontend:v231"
-    build: ./frontend
+      - BACKEND_ENDPOINT=http://backend:80/todos/
+    image: "maeddes/hsefrontend:v23"
   backend:
-    container_name: backend
+    networks:
+      - hsenet
+    ports:
+      - "80:80"
+    environment:
+      - SERVER_PORT=80
+    image: "haproxy:alpine"
+    volumes:
+      - /workspace/hse-2022-winter:/usr/local/etc/haproxy:ro
+  server1:
     ports:
       - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/hsedb
+    image: "maeddes/hsebackend:v23"
+    networks:
+      - hsenet
+    depends_on:
+      - database
+  server2:
+    ports:
+      - "8081:8080"
     environment:
       - SERVER_PORT=8080
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/hsedb
