@@ -311,6 +311,31 @@ _The student understands the relation between container image and container, how
 
 ![Container Advantages and Limitations](pics/container_advantages_and_limitations.excalidraw.png)
 
+## Session 09-Jan-2023 Module: Kubernetes Intro
+
+* Sketch: 
+** Limitation of a stand-alone Docker environment
+** Requirements/Responsibilities to provide an enterprise container runtime
+* Presentation: Cloud Platforms & Kubernetes
+** Kubernetes Background
+** What is CaaS?
+** Cluster & Node Concept
+** Behaviour scenarios of Kubernetes in Action
+** Base API objects: Deployments, ReplicaSets, Pods
+** Intro into kubectl 
+  
+### Objectives and exercises
+_The student understands the requirements and expectations towards cloud platforms and is able to list them. She/he can explain the advantages over standard container operation with Docker. The exercise is to take a sample Spring Boot application and walk through the steps to containerize and deploy to Kubernetes. The student is aware about various options for local and remote Kubernetes options._
+
+image:images/kubernetes_overview.png[Kubernetes in a nutshell]
+
+### Review questions
+
+* Please write 100 lines of YAML Code :)
+* Explain the relation of "some" of the 12 factors in relation to Kubernetes
+* Explain the core principe of Kubernetes in own words. "Why" Kubernetes?
+* What is pod? What is a service?
+* Which kind of Kubernetes providers do you know? Can they be grouped somehow?
 
 ### Links
 
