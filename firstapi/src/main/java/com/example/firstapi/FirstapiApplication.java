@@ -1,5 +1,6 @@
 package com.example.firstapi;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +24,9 @@ public class FirstapiApplication {
 	String newprop = "";
 	TodoItem item = new TodoItem("test");
 
+	@Value("${hostname}")
+	private String hostname;
+
 	/**
 	 * @return nothing
 	 */
@@ -45,10 +49,17 @@ public class FirstapiApplication {
 		return "Hallo, Esslingen. Beautiful weather in October!";
 	}
 
-	@GetMapping(path = "/getstring")
+	@GetMapping(path = "/hello")
 	public String simpleGetMappingHello(){
 
-		return "Hallo, Esslingen. Beautiful weather in October!";
+		return hostname+"Hallo, Esslingen. Beautiful weather in October!";
+	}
+
+	@GetMapping("/fail")
+	public String criticalMethod(){
+
+		// problem fixed System.exit(1);
+		return "can be reached now";
 	}
 
 	/*
