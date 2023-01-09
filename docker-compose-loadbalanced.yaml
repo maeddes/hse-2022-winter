@@ -1,0 +1,68 @@
+version: "3.9"
+services:
+  frontend:
+    container_name: frontend
+    networks:
+      - hsenet
+    ports:
+      - "8090:8090"
+    environment:
+      - SERVER_PORT=8090
+      - BACKEND_ENDPOINT=http://backend:80/todos/
+    image: "maeddes/hsefrontend:v23"
+  backend:
+    networks:
+      - hsenet
+    ports:
+      - "80:80"
+    environment:
+      - SERVER_PORT=80
+    image: "haproxy:alpine"
+    volumes:
+      - /workspace/hse-2022-winter:/usr/local/etc/haproxy:ro
+  server1:
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/hsedb
+    image: "maeddes/hsebackend:v23"
+    networks:
+      - hsenet
+    depends_on:
+      - database
+  server2:
+    ports:
+      - "8081:8080"
+    environment:
+      - SERVER_PORT=8080
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/hsedb
+    image: "maeddes/hsebackend:v23"
+    networks:
+      - hsenet
+    depends_on:
+      - database
+  database:
+    container_name: postgresdb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=matthias
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=hsedb
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    image: "postgres"
+    networks:
+      - hsenet
+    volumes:
+#      version bind mount. Points to a directory in your fs
+#      - /workspace/hse-2022-winter/pgdata:/var/lib/postgresql/data
+#      version docker volume. Points to a shared volume provided by docker
+      - hsevol:/var/lib/postgresql/data
+networks:
+  hsenet:
+    name: hsenet
+
+volumes:
+  hsevol:
+    external: false
