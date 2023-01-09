@@ -308,3 +308,12 @@ _The student understands the relation between container image and container, how
 ### Outlook questions
 
 * Which kind of limitations do you see in a docker-based environment for running high-available distributed applications?
+
+![Container Advantages and Limitations](pics/container_advantages_and_limitations.excalidraw.png)
+
+
+### Links
+
+* https://docs.docker.com/engine/reference/commandline/compose_build/
+* https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+* https://www.baeldung.com/spring-value-annotation
