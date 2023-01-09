@@ -14,9 +14,10 @@ https://www.baeldung.com/spring-5-webclient
 https://www.haproxy.com/de/blog/the-four-essential-sections-of-an-haproxy-configuration/
 https://hub.docker.com/_/haproxy
 
-https://www.baeldung.com/rest-http-put-vs-post
+https://www.baeldung.com/rest-http-put-vs-docker post
 
 docker run -d -p 80:80 --name my-running-haproxy -v /Users/mhs/git/wip/hse-2022-winter:/usr/local/etc/haproxy:ro --sysctl net.ipv4.ip_unprivileged_port_start=0 haproxy:alpine
+docker run -d -p 80:80 --name my-running-haproxy -v /workspace/hse-2022-winter:/usr/local/etc/haproxy:ro --sysctl net.ipv4.ip_unprivileged_port_start=0 haproxy:alpine
 
 mvn compile com.google.cloud.tools:jib-maven-plugin:3.2.1:dockerBuild -Dimage=maeddes/hsebackend:v3
 
@@ -27,3 +28,8 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docke
 exercise question: - caching in client yes/no?
 
 ./mvnw compile com.google.cloud.tools:jib-maven-plugin:3.2.1:build -Dimage=maeddes/frontend:v0.1
+
+https://devhints.io/docker-compose
+
+image compatibility with M1 processors
+deadline lab = deadline corrected exam 
