@@ -342,3 +342,19 @@ image:images/kubernetes_overview.png[Kubernetes in a nutshell]
 * https://docs.docker.com/engine/reference/commandline/compose_build/
 * https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 * https://www.baeldung.com/spring-value-annotation
+
+### Links - Kubernetes Options
+
+* https://github.com/learnk8s/free-kubernetes (Overview)
+
+* https://www.katacoda.com/courses/kubernetes/playground (web-based)
+* https://training.play-with-kubernetes.com/ (web-based, broken?)
+
+* https://kind.sigs.k8s.io/docs/user/quick-start/ (local)
+* https://minikube.sigs.k8s.io/docs/ (local)
+* https://docs.docker.com/get-started/kube-deploy/ (local)
+* https://k3s.io/ (local)
+* https://microk8s.io/ (local)
+
+* https://aws.amazon.com/de/education/awseducate/ (Student)
+* https://azure.microsoft.com/en-us/free/students/ (Student)
