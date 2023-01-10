@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.data.repository.CrudRepository
 import org.springframework.web.bind.annotation.RestController
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 import org.springframework.web.bind.annotation.RequestMapping
