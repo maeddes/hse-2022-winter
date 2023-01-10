@@ -33,3 +33,5 @@ https://devhints.io/docker-compose
 
 image compatibility with M1 processors
 deadline lab = deadline corrected exam 
+
+curl -G https://start.spring.io/starter.zip -d type=maven-project -d language=kotlin -d platformVersion=3.0.1 -d jvmVersion=17 -d groupId=de.maeddes -d artifactId=SpringDataRest -d packageName=de.maeddes.SpringDataRest -d dependencies=web,data-rest,h2
