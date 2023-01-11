@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
     SpringApplication.run(DemoApplication::class.java, *args)
 }
 
-@Entity class TodoItem(@Id var todo: String, val priority: Int)
+@Entity class TodoItem(@Id var todo: String, var priority: Int)
 
 @RepositoryRestResource(collectionResourceRel = "todos", path = "todos")
 interface TodoItemRepository : CrudRepository<TodoItem, String> {}
