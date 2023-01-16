@@ -318,7 +318,7 @@ _The student understands the relation between container image and container, how
 * What is CaaS?
 * Cluster & Node Concept
 * Behaviour scenarios of Kubernetes in Action
-* Base API objects: Deployments, ReplicaSets, Pods
+* Base API objects: Deployments, ReplicaSets, Pods, Services
 * Intro into kubectl 
   
 ### Objectives and exercises
