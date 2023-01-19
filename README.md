@@ -355,3 +355,5 @@ image:images/kubernetes_overview.png[Kubernetes in a nutshell]
 
 * https://aws.amazon.com/de/education/awseducate/ (Student)
 * https://azure.microsoft.com/en-us/free/students/ (Student)
+
+![Kubernetes simple objects](pics/kubernetes_simple_objects.excalidraw.png)
